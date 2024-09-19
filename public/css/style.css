@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+.header-white {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-white .logo {
+    height: 50px;
+}
+
+.header-white .bell-icon img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.header-orange {
+    background-color: #FF9800;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    width: 90%;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.header-text p {
+    font-size: 24px;
+    margin: 5px 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+.header-image img {
+    max-height: 100px;
+    object-fit: contain;
+}
+
+/* Search Bar and Filter */
+.search-filter {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 40px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 15px;
+}
+
+.filter-btn i {
+    font-size: 18px;
+}
+
+.filter-btn:hover {
+    background-color: #e68900;
+}
+
+/* Promo section */
+.special-for-you {
+    text-align: left;
+    margin: 20px auto;
+    width: 90%; /* Mengatur lebar keseluruhan section */
+}
+
+.special-for-you h2 {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+.promotions {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Kurangi jarak antar promo cards */
+    margin: 20px auto;
+    width: 90%;
+}
+
+.promo {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    width: 28%; /* Sesuaikan lebar card promo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px; /* Tambahkan margin */
+    transition: transform 0.3s ease; /* Animasi hover */
+}
+
+.promo:hover {
+    transform: translateY(-5px); /* Efek hover */
+}
+
+.promo img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 10px; /* Berikan sedikit jarak dari tombol */
+}
+
+.promo button {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.3s ease;
+}
+
+.promo button:hover {
+    background-color: #e68900;
+}
+
+/* Kategori section */
+.category {
+    text-align: left;
+    margin: 20px auto;
+    width: 90%; /* Membuat kategori lebih kecil dan terpusat */
+    padding-left: 20px;
+}
+
+.category h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.category-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px; /* Perkecil jarak antar ikon kategori */
+}
+
+.category-icons div {
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    flex-direction: column; /* Ikon dan teks berurutan secara vertikal */
+}
+
+.category-icons img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Menambahkan label di bawah setiap icon kategori */
+.category-icons .category-label {
+    margin-top: 1px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Yard section */
+.top-yard {
+    display: flex;
+    justify-content: flex-start;
+    margin: 40px auto;
+}
+
+.yard-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin: 20px auto;
+    width: 90%;
+}
+
+.yard-item {
+    display: flex;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 600px; /* Atur lebar yang sesuai dengan gambar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Gambar lapangan */
+.yard-item img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* Informasi Yard */
+.yard-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.yard-info .yard-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.discount-section {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #4a4a4a;
+    margin-bottom: 5px;
+}
+
+.discount-section img {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
+.yard-rating {
+    display: flex;
+    align-items: center;
+    color: #ff9800;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.yard-rating img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+/* Garis pemisah */
+.yard-info hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 15px 0;
+}
+
+/* Bagian bawah (Available Slots dan Pesan Sekarang) */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.available-slots {
+    color: #4a4a4a;
+}
+
+.pesan-sekarang {
+    color: #ff9800;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.pesan-sekarang:hover {
+    text-decoration: underline;
+}
+
+/* Payment Page Container */
+.payment-page {
+    background-color: #f9f9f9;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.payment-page img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.detail-item img {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+
+.payment-methods {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.payment-methods button {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #ff9800;
+    background-color: #fff;
+    font-size: 14px;
+    color: #ff9800;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.payment-methods button.selected,
+.payment-methods button:hover {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+/* Harga Section */
+.price-details {
+    text-align: right;
+}
+
+.price-details .price-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #4a4a4a;
+}
+
+.price-details .total-price {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ff9800;
+}
+
+.price-details .original-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Button Bayar */
+.pay-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #ff9800;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.pay-button:hover {
+    background-color: #e68900;
+}

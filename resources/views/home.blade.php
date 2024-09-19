@@ -4,193 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FOOTSAL</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet"> <!-- Load CSS -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #FF9800;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: white;
-        }
-        header img.logo {
-            height: 50px;
-        }
-        header .bell-icon {
-            position: relative;
-        }
-        header .bell-icon img {
-            height: 30px;
-            cursor: pointer;
-        }
-        .search-bar {
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-        }
-        .search-bar input {
-            width: 80%;
-            padding: 10px;
-            border-radius: 25px;
-            border: 1px solid #ddd;
-        }
-        .search-bar button {
-            position: absolute;
-            right: 10%;
-            padding: 10px 20px;
-            background-color: #FF9800;
-            border: none;
-            border-radius: 25px;
-            color: white;
-            cursor: pointer;
-        }
-        .promotions {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 20px 0;
-        }
-        .promotions .promo {
-            background-color: white;
-            border-radius: 10px;
-            padding: 10px;
-            width: 30%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-        }
-        .promotions .promo img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .promotions .promo button {
-            background-color: #FF9800;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-        }
-        .category {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .category h2 {
-            margin-bottom: 20px;
-        }
-        .category-icons {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .category-icons div {
-            background-color: white;
-            padding: 20px;
-            border-radius: 50%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        .top-yards {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .top-yards .yard-list {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        .yard-item {
-            background-color: white;
-            border-radius: 10px;
-            padding: 20px;
-            width: 30%;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .yard-item img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .yard-item button {
-            background-color: #FF9800;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-    </style>
+    <!-- Link ke app.css -->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <!-- Link ke Font Awesome CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-    <!-- Ganti tulisan FOOTSAL dengan gambar -->
+<!-- Header pertama dengan latar belakang putih -->
+<header class="header-white">
     <img src="{{ asset('assets/images/Group 334.png') }}" class="logo" alt="FOOTSAL Logo">
-    <p>Kickstart Your Match, Anytime, Anywhere!</p>
-    <!-- Tambahkan ikon lonceng di sebelah kanan -->
     <div class="bell-icon">
-        <img src="{{ asset('assets/images/bell-icon.png') }}" alt="Notification Bell">
+        <img src="{{ asset('assets/images/Notification.png') }}" alt="Notification Bell">
     </div>
 </header>
 
+<!-- Header kedua dengan latar belakang oranye -->
+<header class="header-orange">
+    <div class="header-text">
+        <p>"Kickstart Your Match,</p>
+        <p>Anytime, Anywhere!"</p>
+    </div>
+    <div class="header-image">
+        <img src="{{ asset('assets/images/gambar sapi.png') }}" >
+    </div>
+</header>
+
+<div class="search-filter">
     <div class="search-bar">
         <input type="text" placeholder="Cari lapangan...">
-        <button>Search</button>
     </div>
+    <button class="filter-btn">
+        <i class="fas fa-filter"></i> <!-- Ikon filter dari Font Awesome -->
+    </button>
+</div>
 
-    <div class="promotions">
-        <div class="promo">
-            <img src="{{ asset('images/promo1.jpg') }}" alt="Promo 1">
-            <button>Claim</button>
-        </div>
-        <div class="promo">
-            <img src="{{ asset('images/promo2.jpg') }}" alt="Promo 2">
-            <button>Claim</button>
-        </div>
-        <div class="promo">
-            <img src="{{ asset('images/promo3.jpg') }}" alt="Promo 3">
-            <button>Claim</button>
-        </div>
+<div class="special-for-you">
+    <h2>#SpecialForYou</h2>
+</div>
+<div class="promotions">
+    <div class="promo">
+        <img src="{{ asset('assets/images/CardDiskon.png') }}" alt="Promo 1">
+        <button>Claim</button>
     </div>
+    <div class="promo">
+        <img src="{{ asset('assets/images/CardDiskon1.png') }}" alt="Promo 2">
+        <button>Claim</button>
+    </div>
+    <div class="promo">
+        <img src="{{ asset('assets/images/CardDiskon.png') }}" alt="Promo 3">
+        <button>Claim</button>
+    </div>
+</div>
 
-    <div class="category">
-        <h2>Category</h2>
-        <div class="category-icons">
-            <div><img src="{{ asset('images/location-icon.png') }}" alt="Location"></div>
-            <div><img src="{{ asset('images/type-icon.png') }}" alt="Type"></div>
-            <div><img src="{{ asset('images/size-icon.png') }}" alt="Size"></div>
+<div class="category">
+    <h2>Category</h2>
+    <div class="category-icons">
+    <div>
+        <img src="{{ asset('assets/images/Location.png') }}" alt="location">
+            <div class="category-label">Location</div> <!-- Label kategori -->
+        </div>
+        <div>
+            <img src="{{ asset('assets/images/Type.png') }}" alt="type">
+            <div class="category-label">Type</div> <!-- Label kategori -->
+        </div>
+        <div>
+            <img src="{{ asset('assets/images/Size.png') }}" alt="size">
+            <div class="category-label">Size</div> <!-- Label kategori -->
         </div>
     </div>
+</div>
 
-    <div class="top-yards">
-        <h2>Top Rated Yards</h2>
-        <div class="yard-list">
-            <div class="yard-item">
-                <img src="{{ asset('images/yard1.jpg') }}" alt="Yard 1">
-                <p>Lapangan Futsal Romeo 5A - 10% Discount area</p>
-                <button>Pesan Sekarang</button>
+<div class="top-yards">
+    <h2>Top Rated Yards</h2>
+    <div class="yard-list">
+    <!-- Card Yard 1-->
+    <div class="yard-item">
+        <img src="{{ asset('assets/images/yard1.png') }}" alt="yard1">
+        <div class="yard-info">
+            <!-- Nama lapangan -->
+            <div class="yard-name">Lapangan Futsal Romeo 5A</div>
+            <!-- Diskon dengan ikon -->
+            <div class="discount-section">
+                <img src="{{ asset('assets/images/Discount.png') }}" alt="diskon">
+                <span>10% Discount area</span>
             </div>
-            <div class="yard-item">
-                <img src="{{ asset('images/yard2.jpg') }}" alt="Yard 2">
-                <p>Lapangan Futsal Romeo 5B - 10% Discount area</p>
-                <button>Pesan Sekarang</button>
+            <!-- Rating dengan ikon bintang -->
+            <div class="yard-rating">
+                <span>⭐ 4.2/5 (40)</span>
             </div>
-            <div class="yard-item">
-                <img src="{{ asset('images/yard3.jpg') }}" alt="Yard 3">
-                <p>Lapangan Futsal Romeo 6C - 10% Discount area</p>
-                <button>Pesan Sekarang</button>
+            <!-- Garis pemisah -->
+            <hr>
+            <!-- Available slot dan pesan sekarang -->
+            <div class="bottom-section">
+                <div class="available-slots">Available 3 Slot Today</div>
+                <a href="#" class="pesan-sekarang">Pesan Sekarang</a>
             </div>
         </div>
     </div>
+    <!-- Card Yard -->
+    <div class="yard-item">
+        <img src="{{ asset('assets/images/yard2.png') }}" alt="yard2">
+        <div class="yard-info">
+            <!-- Nama lapangan -->
+            <div class="yard-name">Lapangan Futsal Romeo 5B</div>
+            <!-- Diskon dengan ikon -->
+            <div class="discount-section">
+                <img src="{{ asset('assets/images/Discount.png') }}" alt="diskon">
+                <span>10% Discount area</span>
+            </div>
+            <!-- Rating dengan ikon bintang -->
+            <div class="yard-rating">
+                <span>⭐ 4.2/5 (40)</span>
+            </div>
+            <!-- Garis pemisah -->
+            <hr>
+            <!-- Available slot dan pesan sekarang -->
+            <div class="bottom-section">
+                <div class="available-slots">Available 3 Slot Today</div>
+                <a href="#" class="pesan-sekarang">Pesan Sekarang</a>
+            </div>
+        </div>
+    </div>
+    <!-- Card Yard 3-->
+    <div class="yard-item">
+        <img src="{{ asset('assets/images/yard3.png') }}" alt="yard3">
+        <div class="yard-info">
+            <!-- Nama lapangan -->
+            <div class="yard-name">Lapangan Futsal Romeo 5C</div>
+            <!-- Diskon dengan ikon -->
+            <div class="discount-section">
+                <img src="{{ asset('assets/images/Discount.png') }}" alt="diskon">
+                <span>10% Discount area</span>
+            </div>
+            <!-- Rating dengan ikon bintang -->
+            <div class="yard-rating">
+                <span>⭐ 4.2/5 (40)</span>
+            </div>
+            <!-- Garis pemisah -->
+            <hr>
+            <!-- Available slot dan pesan sekarang -->
+            <div class="bottom-section">
+                <div class="available-slots">Available 3 Slot Today</div>
+                <a href="#" class="pesan-sekarang">Pesan Sekarang</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
